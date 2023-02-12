@@ -1,35 +1,25 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">{{ name }}</div>
+    <el-upload
+      class="upload-demo"
+      action
+      :auto-upload="false"
+      :show-file-list="false"
+      :on-change="handle"
+    >
+      <el-button size="small" type="primary">点击上传</el-button>
+    </el-upload>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
-  name: 'Dashboard',
-  data() {
-    return {
+  methods: {
+    handle(ev) {
+      console.log('9527:ev',ev)
 
-    }
+    },
   },
-  computed: {
-    ...mapGetters([
-      'name'
-    ])
-  }
-}
+};
 </script>
-
-<style lang="scss" scoped>
-.dashboard {
-  &-container {
-    margin: 30px;
-  }
-  &-text {
-    font-size: 30px;
-    line-height: 46px;
-  }
-}
-</style>
