@@ -5,9 +5,10 @@ import xlsx from "node-xlsx"; // 导入 node-xlsx 模块，用于处理 Excel �
 import chineseS2t from "chinese-s2t"; // 导入 chinese-s2t 模块，用于中文转换
 
 const s2t = chineseS2t.s2t; // 获取 chinese-s2t 模块中的 s2t 函数，用于简体中文转繁体中文
-const env = "admin"; // 设置环境变量
-const lastName = "config/personal/edit"; // 设置 lastName 变量为 "config/personal/edit"
-const excelName = `../../tof-operate-platform-pc/packages/obg-portal/src/i18n/portal/order/delivery/dispatch`; // 设置 excelName 变量为指定路径的字符串
+// D:\tof-operate-platform-pc/packages/obg-admin/src/i18n/config/personal/edit
+// /tof-operate-platform-pc/packages/obg-portal/src/i18n/portal/order/delivery/dispatch
+// d读取模块   package.json 要设置"type": "module";
+const excelName = `../../tof-operate-platform-pc/packages/obg-admin/src/i18n/config/personal/edit`; // 设置 excelName 变量为指定路径的字符串
 const filePath = resolve(excelName); // 使用 resolve 函数将 excelName 转换为绝对路径
 const regex = /i18n\/(.+)/; // 正则表达式，用于匹配路径中的 "i18n" 目录后的内容
 const match = excelName.match(regex); // 使用正则表达式匹配 excelName 中的内容
