@@ -14,12 +14,5 @@
 </template>
 
 <script>
-export default {
-  methods: {
-    handle(ev) {
-      console.log('9527:ev',ev)
-
-    },
-  },
-};
+export default {};
 </script>
